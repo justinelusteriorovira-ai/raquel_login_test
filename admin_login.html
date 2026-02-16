@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/cefi.ico">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="styles/login_style.css">
+
+</head>
+<body>
+  <nav>
+    <img src="img/png-logo.png" alt="cefi-logo" loading="lazy"> 
+  </nav>
+
+  <div class="login-container">
+    <div class="login-box">
+      <!-- Role buttons inside login box -->
+      <div class="role-menu">
+        <button onclick="location.href='hr_login.html'">HR LOGIN</button>
+        <button onclick="location.href='employee_login.html'">EMPLOYEE LOGIN</button>
+      </div>
+      
+      <h2>ADMIN LOGIN</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+        <p id="msg" style="text-align:center; margin-top:10px;"></p>
+        <div id="forget-password">
+          <a href="https://www.instagram.com/p/DOdQXicAdOY/">Forgot password?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2026 Raquel Pawnshop by RPI Web Team | All Rights Reserved
+  </div>
+
+</body>
+</html>
