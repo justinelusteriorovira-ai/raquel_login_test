@@ -1,4 +1,6 @@
-/* Reset and global styles */
+/* ========================================
+   RESET AND GLOBAL STYLES
+======================================== */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,9 @@ body {
   min-height: 100vh;
 }
 
-/* Navigation bar */
+/* ========================================
+   NAVIGATION BAR
+======================================== */
 nav {
   background-color: #013C10;
   color: white;
@@ -29,7 +33,9 @@ nav img {
   margin-right: 10px;
 }
 
-/* Login container */
+/* ========================================
+   LOGIN CONTAINER
+======================================== */
 .login-container {
   flex: 1;
   display: flex;
@@ -48,7 +54,9 @@ nav img {
   max-width: 380px;
 }
 
-/* Role menu styling */
+/* ========================================
+   ROLE MENU BUTTONS
+======================================== */
 .role-menu {
   position: absolute;
   top: 15px;
@@ -67,8 +75,8 @@ nav img {
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.25s ease;
-  width: 120px;   /* fixed width */
-  height: 40px;   /* fixed height */
+  width: 120px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,11 +93,14 @@ nav img {
   background-color: #e0c000;
 }
 
+/* ========================================
+   LOGIN FORM
+======================================== */
 .login-box h2 {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 35px;
   color: #094F36;
-  margin-top: 35px; 
 }
 
 .input-group {
@@ -124,6 +135,13 @@ nav img {
   transition: 0.3s;
 }
 
+.btn:hover {
+  background-color: #0b6143;
+}
+
+/* ========================================
+   FORGET PASSWORD LINK
+======================================== */
 #forget-password {
   display: block;
   text-align: center;
@@ -143,10 +161,9 @@ nav img {
   color: #004d2b;
 }
 
-.btn:hover {
-  background-color: #0b6143;
-}
-
+/* ========================================
+   FOOTER
+======================================== */
 .footer {
   text-align: center;
   padding: 10px;
@@ -156,8 +173,14 @@ nav img {
   background-color: #013C10;
 }
 
-/* Responsive tweaks */
+/* ========================================
+   RESPONSIVE STYLES - MOBILE (< 480px)
+======================================== */
 @media (max-width: 480px) {
+  nav {
+    padding: 10px 15px;
+  }
+
   .login-box {
     max-width: 90%;
     padding: 25px;
@@ -166,10 +189,6 @@ nav img {
   .role-menu {
     top: 10px;
     right: 10px;
-  }
-
-  nav {
-    padding: 10px 15px;
   }
 
   .role-menu button {
@@ -204,14 +223,17 @@ nav img {
   }
 }
 
+/* ========================================
+   RESPONSIVE STYLES - TABLET (481px - 768px)
+======================================== */
 @media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    padding: 12px 18px;
+  }
+
   .login-box {
     max-width: 400px;
     padding: 28px;
-  }
-
-  nav {
-    padding: 12px 18px;
   }
 
   .role-menu button {
@@ -246,14 +268,17 @@ nav img {
   }
 }
 
+/* ========================================
+   RESPONSIVE STYLES - SMALL DESKTOP (769px - 992px)
+======================================== */
 @media (min-width: 769px) and (max-width: 992px) {
+  nav {
+    padding: 14px 20px;
+  }
+
   .login-box {
     max-width: 420px;
     padding: 32px;
-  }
-
-  nav {
-    padding: 14px 20px;
   }
 
   .role-menu button {
@@ -288,14 +313,17 @@ nav img {
   }
 }
 
+/* ========================================
+   RESPONSIVE STYLES - MEDIUM DESKTOP (993px - 1200px)
+======================================== */
 @media (min-width: 993px) and (max-width: 1200px) {
+  nav {
+    padding: 15px 22px;
+  }
+
   .login-box {
     max-width: 450px;
     padding: 35px;
-  }
-
-  nav {
-    padding: 15px 22px;
   }
 
   .role-menu button {
@@ -330,14 +358,17 @@ nav img {
   }
 }
 
+/* ========================================
+   RESPONSIVE STYLES - LARGE DESKTOP (> 1201px)
+======================================== */
 @media (min-width: 1201px) {
+  nav {
+    padding: 16px 25px;
+  }
+
   .login-box {
     max-width: 500px;
     padding: 40px;
-  }
-
-  nav {
-    padding: 16px 25px;
   }
 
   .role-menu button {
