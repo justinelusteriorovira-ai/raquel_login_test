@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Construction</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+    }
+
+    .card {
+        background: #fff;
+        width: 380px;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+        animation: fadeIn 0.8s ease;
+    }
+
+    .emoji {
+        font-size: 70px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .emoji:hover {
+        transform: scale(1.15) rotate(-5deg);
+    }
+
+    h1 {
+        margin: 15px 0 10px;
+    }
+
+    .status {
+        font-size: 0.95rem;
+        color: #666;
+        min-height: 24px;
+    }
+
+    .progress-box {
+        background: #eee;
+        border-radius: 30px;
+        overflow: hidden;
+        height: 16px;
+        margin: 20px 0 8px;
+    }
+
+    .progress {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        transition: width 0.4s ease;
+    }
+
+    .percent {
+        font-size: 0.85rem;
+        color: #888;
+    }
+
+    button {
+        margin-top: 18px;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 25px;
+        background: #667eea;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+        background: #5563c1;
+        transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="emoji" id="builder">🚧</div>
+    <h1>Under Construction</h1>
+
+    <div class="status" id="status">
+        Click the sign to help us build!
+    </div>
+
+    <div class="progress-box">
+        <div class="progress" id="progress"></div>
+    </div>
+    <div class="percent" id="percent">0% completed</div>
+
+    <button onclick="resetProgress()">Reset Progress</button>
+</div>
+
+<script>
+    let progress = 0;
+
+    const messages = [
+        "Hammering some pixels 🔨",
+        "Aligning divs perfectly… maybe 😅",
+        "Fixing bugs (creating new ones) 🐞",
+        "Loading creativity ✨",
+        "Almost there… probably 👀"
+    ];
+
+    const builder = document.getElementById("builder");
+    const bar = document.getElementById("progress");
+    const percentText = document.getElementById("percent");
+    const statusText = document.getElementById("status");
+
+    builder.addEventListener("click", () => {
+        if (progress < 100) {
+            progress += Math.floor(Math.random() * 15) + 5;
+            if (progress > 100) progress = 100;
+
+            bar.style.width = progress + "%";
+            percentText.textContent = progress + "% completed";
+            statusText.textContent = messages[Math.floor(Math.random() * messages.length)];
+
+            if (progress === 100) {
+                statusText.textContent = "🎉 Done! Website coming soon!";
+                builder.textContent = "✅";
+            }
+        }
+    });
+
+    function resetProgress() {
+        progress = 0;
+        bar.style.width = "0%";
+        percentText.textContent = "0% completed";
+        statusText.textContent = "Click the sign to help us build!";
+        builder.textContent = "🚧";
+    }
+</script>
+
+</body>
+</html>

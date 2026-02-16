@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="img/cefi.ico">
+  <link rel="icon" type="image/x-icon" href="img/raquel_circle_logo.ico">
   <title>Employee Login</title>
   <link rel="stylesheet" href="styles/login_style.css">
 
 </head>
 <body>
   <nav>
-    <img src="img/png-logo.png" alt="cefi-logo" loading="lazy"> 
+    <img src="img/png-logo.png" alt="raquel-logo" loading="lazy"> 
   </nav>
 
   <div class="login-container">
     <div class="login-box">
-      <!-- Role buttons inside login box -->
       <div class="role-menu">
         <button onclick="location.href='index.html'">ADMIN LOGIN</button>
         <button onclick="location.href='hr_login.html'">HR LOGIN</button>
@@ -25,7 +24,7 @@
       <form id="loginForm">
         <div class="input-group">
           <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter username" required>
+          <input type="text" id="username" placeholder="employee1@raquelpawnshop.com" required>
         </div>
 
         <div class="input-group">
@@ -36,15 +35,17 @@
         <button class="btn" type="submit">Login</button>
         <p id="msg" style="text-align:center; margin-top:10px;"></p>
         <div id="forget-password">
-          <a href="https://www.instagram.com/p/DOdQXicAdOY/">Forgot password?</a>
+          <a href="testing.html">Forgot password?</a>
         </div>
       </form>
     </div>
   </div>
 
   <div class="footer">
-    <p>© 2026 Raquel Pawnshop by RPI Web Team | All Rights Reserved</p>
+    <p>© 2026 Raquel Pawnshop by cefi students | All Rights Reserved</p>
   </div>
 
+  <!-- Login JavaScript -->
+  <script src="js/login.js"></script>
 </body>
 </html>
