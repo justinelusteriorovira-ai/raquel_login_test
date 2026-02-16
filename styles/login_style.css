@@ -15,7 +15,7 @@ body {
 
 /* Navigation bar */
 nav {
-  background-color: #d2f704;
+  background-color: #013C10;
   color: white;
   display: flex;
   justify-content: flex-start;
@@ -151,8 +151,9 @@ nav img {
   text-align: center;
   padding: 10px;
   font-size: 0.85rem;
-  color: whitesmoke;
-  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  background-color: #013C10;
 }
 
 /* Responsive tweaks */
